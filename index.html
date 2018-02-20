@@ -1,43 +1,49 @@
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<html>
+    <head>
+        <title>Vue App</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <div id="vueApp">
+            <h1>
+                {{ headerText }}
+            </h1>
 
-<div id="vueApp">
-    <h1>
-        {{ headerText }}
-    </h1>
+            <p v-bind:title="hoverTitle">
+                {{ message }}
+            </p>
 
-    <p v-bind:title="hoverTitle">
-        {{ message }}
-    </p>
+            <hr />
 
-    <hr />
+            <button v-on:click="toggleTime">{{ buttonText }}</button><br />
+            <p v-if="timeVisible">
+                {{ timeMessage }}
+            </p>
 
-    <button v-on:click="toggleTime">{{ buttonText }}</button><br />
-    <p v-if="timeVisible">
-        {{ timeMessage }}
-    </p>
+            <hr />
 
-    <hr />
+            <div>
+                <ul>
+                    <li v-for="beer in beers">
+                        {{ beer }}
+                    </li>
+                </ul>
+            </div>
 
-    <div>
-        <ul>
-            <li v-for="beer in beers">
-                {{ beer }}
-            </li>
-        </ul>
-    </div>
+            <hr />
 
-    <hr />
+            <p>
+                <label>Wijzig de titel van de pagina hieronder:</label><br />
+                <input type="text" v-model="headerText" />
+            </p>
 
-    <p>
-        <label>Wijzig de titel van de pagina hieronder:</label><br />
-        <input type="text" v-model="headerText" />
-    </p>
+            <hr />
 
-    <!-- <hr /> -->
+            <h2>Components</h2>
 
-    <!-- <h2>Components</h2> -->
+            <todo></todo>
+        </div>
 
-    <!-- <todo></todo> -->
-</div>
-
-<script src="index.js"></script>
+        <script type="javascript" src="index.js"></script>
+    </body>
+</html>

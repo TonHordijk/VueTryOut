@@ -1,3 +1,7 @@
+Vue.component('todo', {
+  template: '<h3>This will be a todo list</h3>'
+});
+
 var app = new Vue({
   el: '#vueApp',
   data: {
@@ -21,7 +25,3 @@ var app = new Vue({
     }
   }
 });
-
-// Vue.component('todo', {
-//   template: '<h3>This will be a todo list</h3>'
-// });
