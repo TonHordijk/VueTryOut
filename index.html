@@ -41,7 +41,7 @@
 
             <h2>Components</h2>
 
-            <todo></todo>
+            <todo v-for="todo in todoList" v-bind:todoitem="todo.text" v-bind:key="todo.id"></todo>
         </div>
 
         <script type="javascript" src="index.js"></script>

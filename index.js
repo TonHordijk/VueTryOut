@@ -1,5 +1,6 @@
 Vue.component('todo', {
-  template: '<h3>This will be a todo list</h3>'
+  template: '<li>{{ todoitem }}</li>',
+  props: ['todoitem']
 });
 
 var app = new Vue({
@@ -10,7 +11,8 @@ var app = new Vue({
     timeVisible: false,
     buttonText: 'Toon tijd',
     beers: ['Hertog Jan', 'Gulpener', 'Palm', 'Jupiler', 'Duvel'],
-    headerText: 'Welkom!'
+    headerText: 'Welkom!',
+    todoList: [{ text: 'todo 1', id: '1' }, { text: 'todo 2', id: '2' }, { text: 'todo 3', id: '3' }, { text: 'todo 4', id: '4' }]
   },
   methods: {
     toggleTime() {
