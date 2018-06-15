@@ -1,16 +1,15 @@
-<script>
-import {Vue } from 'vue-property-decorator';
-
-export default class Home extends Vue {}
-</script>
 <template>
     <div id="home">
-        <h2>Staq - Introduction Vue.js</h2>
-        <img src="../assets/logo.png">
+        <TicTacToe></TicTacToe>
     </div>
 </template>
 
 <script>
-  export default {
-  }
+    import TicTacToe from '../components/TicTacToe.vue';
+
+    export default {
+        components: {
+            TicTacToe
+        }
+    }
 </script>
